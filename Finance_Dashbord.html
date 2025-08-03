@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Finance_Dashbord</title>
+</head>
+<style>
+    body{
+        margin: 0%;
+        padding:0%;
+        background:linear-gradient(to right bottom,rgb(57, 54, 52),rgba(0, 0, 0, 1));
+        width: 100%;
+    }
+
+
+    main{
+        display: flex;
+        justify-content: center;
+        color: rgb(230, 205, 172);
+    }
+    .wholeBoard{
+        padding-top: 10px;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .topBox{
+        min-width: 800px;
+        min-height: 250px;
+        background-color: transparent;
+       
+    }
+    @media (max-width:500px){ [class="topBox"]{
+            max-width: 430px;
+          
+        } }
+    #infoBoxesContainer{
+        max-width: 800px;
+        min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: transparent;
+        
+    }
+    .infoBox{
+      
+        padding: 8px;
+        color: rgb(224, 203, 174);
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+    } 
+    
+    .nameBox{
+        min-width: 320px;
+        min-height: 120px;
+        margin: 4px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        background-color:transparent;
+        border-radius: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        border: solid 0.5px;
+        border-color: rgba(184, 184, 184,0.2);
+        box-shadow:  5px 5px 5px rgba(0,0,0,0.5);
+    }
+  
+
+
+</style>
+<body>
+    
+    <header>
+
+
+    </header>
+
+    <main>
+        <div class="wholeBoard"> 
+             
+            <div id="graf" class="topBox"> </div>
+
+            <div id="infoBoxesContainer"> 
+                
+                <div class="nameBox">
+                    <p> BTC TO USD</p>
+                    <div id="btcUsd" class="infoBox"></div>
+                </div>
+                
+                <div class="nameBox">
+                    <p> USD TO RUB</p>
+                    <div id="usdRub" class="infoBox"></div>
+                </div>
+                <div class="nameBox">
+                    <p> BTC TO RUB </p> 
+                    <div id="btcRub" class="infoBox"></div>
+                </div>
+                <div class="nameBox">
+                    <p> KAS TO USD</p> 
+                    <div id="kasUsd" class="infoBox"></div>
+                </div>
+
+            </div>
+            <div class="refresh">
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+    <script src="./Finance_Dashbord.js" defer></script>
+</body>
+</html>
